@@ -1,5 +1,6 @@
 const User = require("../user/model");
 const { toData } = require("./jwt");
+
 function auth(req, res, next) {
   const auth =
     req.headers.authorization && req.headers.authorization.split(" ");
@@ -24,4 +25,5 @@ function auth(req, res, next) {
     });
   }
 }
+
 module.exports = auth;
